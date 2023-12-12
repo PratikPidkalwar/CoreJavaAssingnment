@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="Todo9.Course"/>
+    <fullyQualifiedTypeName name="Todo9.Serialize_Deserialize"/>
+    <fullyQualifiedTypeName name="Todo9Practice.Serializer_Deserialize"/>
+    <fullyQualifiedTypeName name="Todo9Practice.Course"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="practiceTodo9.Course"/>
+    <fullyQualifiedTypeName name="practiceTodo9.Serialize_Deserialize"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+</qualifiedTypeNameHistroy>

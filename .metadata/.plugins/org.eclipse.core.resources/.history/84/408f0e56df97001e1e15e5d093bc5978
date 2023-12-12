@@ -1,0 +1,30 @@
+package practiceTodo9;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Iterator;
+
+public class Serialize_Deserialize {
+
+public void serialize(Course[] arr) {
+	String path="./src/practiceTodo9/Coursedata.txt";
+	
+	try(FileOutputStream fs=new FileOutputStream(path);
+		ObjectOutputStream os=new ObjectOutputStream(fs);) {
+		
+	for(Course course: arr)
+		os.writeObject(course);
+	System.out.println("Serialization Completed.");
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+}
+
+public void Deserialization() {
+	
+}
+}

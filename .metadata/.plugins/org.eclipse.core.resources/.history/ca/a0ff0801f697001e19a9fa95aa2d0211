@@ -1,0 +1,29 @@
+package practiceTodo6;
+
+public class CourseCollect {
+
+	private static Course[] allCourse=new Course[2];
+	static {
+		allCourse[0]=new Course(1,"abc");
+		allCourse[1]=new Course(2,"xyz");
+	}
+	
+	public void getMatchCourses(String name) {
+	int flag=-1;
+	int index=0;
+		for(Course cc:allCourse) {
+			String currProviderCourse=cc.getName();
+			
+			if(currProviderCourse.equals(name)) {
+				flag=1;
+				System.out.println(cc);
+			}
+			
+		}
+		if(flag==-1) {
+			String error="Course name not found.";
+			
+		}
+	}
+	
+}

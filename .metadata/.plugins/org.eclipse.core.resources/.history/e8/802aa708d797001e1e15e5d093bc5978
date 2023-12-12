@@ -1,0 +1,33 @@
+package Todo9Practice;
+
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+public class CourseDeseralizeMain {
+
+	public static void main(String[] args) {
+		
+		String filePath = "./src/Todo9Practice/Course9.txt";
+		
+		try(FileInputStream fin = new FileInputStream(filePath);
+				ObjectInputStream bin = new ObjectInputStream(fin)){
+			
+			  Course courses =(Course) bin.readObject();
+		
+			  //Course course = (Course)courses;
+			  System.out.println(courses);
+			
+			
+			
+			
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		
+		
+		
+		
+	}
+}

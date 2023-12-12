@@ -1,0 +1,53 @@
+package Todo9Practice;
+
+
+
+import java.util.Scanner;
+
+import Todo9.Serialize_Deserialize;
+
+public class CourseMain {
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("How many objects to serialize: ");
+        int size = sc.nextInt();
+
+        Course[] courses;
+        courses = takeInput(size);
+        Serializer_Deserialize sd=new Serializer_Deserialize();
+        sd.serializaton(courses);
+        
+      Course[] course= sd.De_serializaton(size);
+      
+      for(Course ccd: course) {
+    	  System.out.println(ccd);
+      }
+      
+        }
+    private static Course[] takeInput(int size) {
+        Course[] courses = new Course[size];
+        int j = 0;
+
+        while (j < size) {
+            System.out.println("Enter Course ID: ");
+            int id = sc.nextInt();
+
+            System.out.println("Enter Course title: ");
+            String title = sc.next();
+
+            System.out.println("Enter Course Duration: ");
+            int duration = sc.nextInt();
+
+            System.out.println("Enter Course Provider: ");
+            String provider = sc.next();
+
+            courses[j] = new Course(id, title, duration, provider);
+            j++;
+        }
+
+        return courses;
+    }
+    }
+
+   

@@ -1,0 +1,46 @@
+package Todo9Practice;
+
+import java.io.Serializable;
+
+public class Course implements Serializable{
+private int id;
+private String title;
+private int duration;
+private String provider;
+public Course(int id, String title, int duration, String provider) {
+	super();
+	this.id = id;
+	this.title = title;
+	this.duration = duration;
+	this.provider = provider;
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getTitle() {
+	return title;
+}
+public void setTitle(String title) {
+	this.title = title;
+}
+public int getDuration() {
+	return duration;
+}
+public void setDuration(int duration) {
+	this.duration = duration;
+}
+public String getProvider() {
+	return provider;
+}
+public void setProvider(String provider) {
+	this.provider = provider;
+}
+@Override
+public String toString() {
+	return "Course [id=" + id + ", title=" + title + ", duration=" + duration + ", provider=" + provider + "]";
+}
+
+}

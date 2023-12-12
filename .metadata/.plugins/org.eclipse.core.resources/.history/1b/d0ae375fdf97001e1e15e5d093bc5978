@@ -1,0 +1,30 @@
+package practiceTodo9;
+
+import java.util.Scanner;
+
+public class CourseMain {
+static Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("How many object you want to serialize");
+		int size=sc.nextInt();
+		
+		Course[] courses=new Course[size];
+		int i=0;
+		while(i<size) {
+			System.out.println("id:");
+			int id=sc.nextInt();
+			
+			System.out.println("CName:");
+			String name=sc.next();
+			
+			courses[i] =new Course(id,name);
+			i++;
+		}
+		Serialize_Deserialize sd=new Serialize_Deserialize();
+		sd.serialize(courses);
+		
+	}
+
+}

@@ -1,0 +1,48 @@
+package Todo9Practice;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class Serializer_Deserialize {
+
+	//private static Course[] courses;
+	static void serializaton(Course[] arr) {
+		String path="./src/Todo9Practice/Course9.txt";
+		
+		try(FileOutputStream fs=new FileOutputStream(path);
+			ObjectOutputStream oos=new ObjectOutputStream(fs);) {
+			
+			
+				oos.writeObject(fs);
+			
+			System.out.println("Serialization successful.");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Serialization not successful.");
+		}
+	}
+	static Course[] De_serializaton(int size) {
+		String path="./src/Todo9Practice/Course9.txt";
+		
+		try(FileInputStream fs=new FileInputStream(path);
+			ObjectInputStream ooss=new ObjectInputStream(fs);) {
+			
+			
+	        Course[] courses = (Course[]) ooss.readObject();
+	        System.out.println("DeSerialization successful.");
+			return courses;
+
+	        
+		} catch (IOException | ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("DeSerialization not successful.");
+			return null;
+		}
+	}
+}

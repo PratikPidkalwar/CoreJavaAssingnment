@@ -1,0 +1,15 @@
+package practiceTodo6;
+
+import Todo6.CourseCollection;
+
+public class CourseMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name="abc";
+    CourseCollect cc=new CourseCollect();
+     cc.getMatchCourses(name);
+
+	}
+
+}
